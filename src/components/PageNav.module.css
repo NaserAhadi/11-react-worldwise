@@ -1,0 +1,19 @@
+.nav{
+    background: aquamarine;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav :global(.active){
+    background: red;
+}
+
+/* creating global css class in module by global function */
+/* it works without importing the related css module */
+:global(.test){
+    background: red;
+}
