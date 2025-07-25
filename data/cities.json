@@ -10,7 +10,7 @@
         "lat": 38.727881642324164,
         "lng": -9.140900099907554
       },
-      "id": 73930385
+      "id": "73930385"
     },
     {
       "cityName": "Madrid",
@@ -22,7 +22,7 @@
         "lat": 40.46635901755316,
         "lng": -3.7133789062500004
       },
-      "id": 17806751
+      "id": "17806751"
     },
     {
       "cityName": "Berlin",
@@ -34,7 +34,151 @@
         "lat": 52.53586782505711,
         "lng": 13.376933665713324
       },
-      "id": 98443197
+      "id": "98443197"
+    },
+    {
+      "id": "c600",
+      "cityName": "Svetla nad Sazavou",
+      "country": "Czechia",
+      "emoji": "🇨🇿",
+      "date": "2025-07-25T15:40:34.789Z",
+      "notes": "",
+      "position": {
+        "lat": "49.710272582105695",
+        "lng": "15.402832031250002"
+      }
+    },
+    {
+      "id": "d06d",
+      "cityName": "Bradeni",
+      "country": "Romania",
+      "emoji": "🇷🇴",
+      "date": "2025-07-25T15:42:11.549Z",
+      "notes": "",
+      "position": {
+        "lat": "46.057985244793024",
+        "lng": "24.916992187500004"
+      }
+    },
+    {
+      "id": "c0b5",
+      "cityName": "Al Fallujah",
+      "country": "Iraq",
+      "emoji": "🇮🇶",
+      "date": "2025-07-25T15:51:01.200Z",
+      "notes": "",
+      "position": {
+        "lat": "33.063924198120645",
+        "lng": "44.05517578125"
+      }
+    },
+    {
+      "id": "b5b9",
+      "cityName": "Herbsleben",
+      "country": "Germany",
+      "emoji": "🇩🇪",
+      "date": "2025-07-25T15:51:38.074Z",
+      "notes": "test",
+      "position": {
+        "lat": "51.12421275782688",
+        "lng": "10.810546875000002"
+      }
+    },
+    {
+      "id": "ca9f",
+      "cityName": "Herbsleben",
+      "country": "Germany",
+      "emoji": "🇩🇪",
+      "date": "2025-07-25T15:51:38.074Z",
+      "notes": "test",
+      "position": {
+        "lat": "51.12421275782688",
+        "lng": "10.810546875000002"
+      }
+    },
+    {
+      "id": "30ca",
+      "cityName": "Soltau",
+      "country": "Germany",
+      "emoji": "🇩🇪",
+      "date": "2025-07-25T15:54:17.912Z",
+      "notes": "test",
+      "position": {
+        "lat": "52.98833725339543",
+        "lng": "9.689941406250002"
+      }
+    },
+    {
+      "id": "10df",
+      "cityName": "Boniewo",
+      "country": "Poland",
+      "emoji": "🇵🇱",
+      "date": "2025-07-25T15:57:48.173Z",
+      "notes": "",
+      "position": {
+        "lat": "52.482780222078226",
+        "lng": "18.874511718750004"
+      }
+    },
+    {
+      "id": "e273",
+      "cityName": "Minsk",
+      "country": "Belarus",
+      "emoji": "🇧🇾",
+      "date": "2025-07-25T16:05:32.055Z",
+      "notes": "",
+      "position": {
+        "lat": "53.87844040332883",
+        "lng": "28.081054687500004"
+      }
+    },
+    {
+      "id": "7a7e",
+      "cityName": "Farrera",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-07-25T16:06:26.595Z",
+      "notes": "",
+      "position": {
+        "lat": "42.50450285299051",
+        "lng": "1.2524414062500002"
+      }
+    },
+    {
+      "id": "5082",
+      "cityName": "Rothenbach",
+      "country": "Switzerland",
+      "emoji": "🇨🇭",
+      "date": "2025-07-25T16:09:28.645Z",
+      "notes": "",
+      "position": {
+        "lat": "46.84516443029276",
+        "lng": "7.734375000000001"
+      }
+    },
+    {
+      "id": "ae24",
+      "cityName": "Gaukonigshofen",
+      "country": "Germany",
+      "emoji": "🇩🇪",
+      "date": "2025-07-25T16:09:44.167Z",
+      "notes": "",
+      "position": {
+        "lat": "49.61070993807422",
+        "lng": "9.975585937500002"
+      }
+    },
+    {
+      "id": "a24f",
+      "cityName": "Zeewolde",
+      "country": "Netherlands (Kingdom of the)",
+      "emoji": "🇳🇱",
+      "date": "2025-07-25T16:09:49.505Z",
+      "notes": "",
+      "position": {
+        "lat": "52.29504228453735",
+        "lng": "5.339355468750001"
+      }
     }
   ]
 }

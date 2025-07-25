@@ -7,6 +7,10 @@ import BackButton from "@/components/BackButton.jsx";
 import { useUrlPosition } from "@/hooks/useUrlPosition";
 import Message from "@/components/Message";
 import Spinner from "@/components/Spinner";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { useCities } from "@/contexts/CitiesContext.jsx";
+import { useNavigate } from "react-router-dom";
 
 export function convertToEmoji(countryCode) {
   const codePoints = countryCode
@@ -27,6 +31,9 @@ function Form() {
   const [isLoadingGeocoding, setIsLoadingGeocoding] = useState(false);
   const [emoji, setEmoji] = useState("");
   const [geocodingError, setGeocodingError] = useState("");
+  const { createCity, isLoading: isAddBtnLoading } = useCities();
+
+  const navigate = useNavigate();
 
   useEffect(
     function () {
@@ -62,12 +69,28 @@ function Form() {
     [lat, lng],
   );
 
+  async function handleSubmit(e) {
+    e.preventDefault();
+    if (!cityName || !date) return;
+
+    const newCity = {
+      cityName,
+      country,
+      emoji,
+      date,
+      notes,
+      position: { lat, lng },
+    };
+    await createCity(newCity);
+    navigate("/app/cities");
+  }
+
   if (!lat && !lng) return <Message message={`start by clicking on the map`} />;
   if (isLoadingGeocoding) return <Spinner />;
   if (geocodingError) return <Message message={geocodingError} />;
 
   return (
-    <form className={styles.form}>
+    <form className={`${styles.form} ${isAddBtnLoading ? styles.loading : ""}`}>
       <div className={styles.row}>
         <label htmlFor="cityName">City name</label>
         <input
@@ -80,10 +103,12 @@ function Form() {
 
       <div className={styles.row}>
         <label htmlFor="date">When did you go to {cityName}?</label>
-        <input
+        <DatePicker
           id="date"
-          onChange={(e) => setDate(e.target.value)}
-          value={date}
+          onChange={(date) => setDate(date)}
+          selected={date}
+          dateFormat={`dd/MM/yyyy`}
+          showMonthYearDropdown
         />
       </div>
 
@@ -97,7 +122,9 @@ function Form() {
       </div>
 
       <div className={styles.buttons}>
-        <Button type="primary">Add</Button>
+        <Button type="primary" onClick={handleSubmit}>
+          Add
+        </Button>
         <BackButton />
       </div>
     </form>
