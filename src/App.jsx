@@ -1,5 +1,4 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { useEffect, useState } from "react";
 
 import Homepage from "./pages/Homepage";
 import Product from "./pages/Product";
@@ -13,6 +12,7 @@ import City from "@/components/City.jsx";
 import Form from "@/components/Form.jsx";
 import { CitiesProvider } from "./contexts/CitiesContext";
 import { AuthProvider } from "./contexts/FakeAuthContext.jsx";
+import ProtectedRoute from "@/pages/ProtectedRoute.jsx";
 
 function App() {
   return (
@@ -23,7 +23,14 @@ function App() {
             <Route index element={<Homepage />} />
             <Route path="/product" element={<Product />} />
             <Route path="/pricing" element={<Pricing />} />
-            <Route path="/app" element={<AppLayout />}>
+            <Route
+              path="/app"
+              element={
+                <ProtectedRoute>
+                  <AppLayout />
+                </ProtectedRoute>
+              }
+            >
               <Route index element={<Navigate to="cities" replace />} />
               <Route path="cities" element={<CityList />} />
               <Route path="cities/:id" element={<City />} />
